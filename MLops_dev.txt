@@ -1,0 +1,50 @@
+🗺️ Project Plan & Timeline (Accelerated Blueprint)
+This schedule is optimized for an intensive implementation cycle, emphasizing building the MVP first and wrapping it with enterprise MLOps guardrails.
+
+[Week 1-2] ──► [Week 3-4] ──► [Week 5-6] ──► [Week 7-8]
+Foundations     Agent Logic   LLMOps/Eval    Cloud UI & Demo
+📅 Weeks 1–2: Infrastructure Foundations & Data Ingestion
+Deliverables: Working data pipeline, environment containerization, and repository setup.
+
+Tasks:
+
+Initialize the Python project structure and configure environment variables securely.
+
+Write a mock log-generator script to stream simulated server alerts into an API endpoint using FastAPI.
+
+Set up a managed vector database instance (e.g., Qdrant Cloud or Pinecone free tier) and populate it with sample infrastructure troubleshooting playbooks.
+
+📅 Weeks 3–4: Multi-Agent Logic & LangGraph State Machine
+Deliverables: A functioning autonomous loop that can parse logs, retrieve help context, and safely generate text fixes.
+
+Tasks:
+
+Define the core AgentState object to store ongoing conversation histories, current log inputs, and generated fixes.
+
+Build the LangGraph topology: create a Triage Node to parse inputs, an Analysis Node linked to your vector DB, and a conditional router node.
+
+Implement Human-in-the-Loop (HITL) interruption logic—forcing the state machine to pause and save its state whenever the agent attempts to output a critical remediation script.
+
+📅 Weeks 5–6: LLMOps Integration & Automated Evaluation Suite
+Deliverables: Live performance telemetry dashboards and a functional GitHub Actions validation test.
+
+Tasks:
+
+Connect the backend execution runtime to an observability platform (LangSmith or Langfuse) to map nested agent tool calls.
+
+Compile a deterministic test dataset consisting of 30 explicit infrastructure problem scenarios paired with ideal, expected baseline criteria.
+
+Develop an evaluation script (using metrics like correctness and hallucination detection) that scores the agent's graph performance automatically.
+
+Integrate this script as a pre-merge check inside GitHub Actions to enforce quality control before code updates.
+
+📅 Weeks 7–8: Minimalist UI, Cloud Deployment & Validation
+Deliverables: Hosted cloud platform, interactive web control panel, and a finalized project thesis.
+
+Tasks:
+
+Build a responsive, single-page UI using Streamlit or an Angular template containing a chat area for real-time human approvals and an embedded live telemetry panel.
+
+Containerize the application layers via Docker and host them using serverless container runtimes (such as AWS ECS Fargate or Google Cloud Run).
+
+Execute load testing to document token-saving efficiency metrics, collect your execution diagrams, and format your university presentation deck.
