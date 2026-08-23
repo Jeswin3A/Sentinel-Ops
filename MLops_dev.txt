@@ -1,3 +1,6 @@
+Sentinel-Ops - Cloud-Native Autonomous Agent Fleet with LLMOps Guardrails
+
+
 🗺️ Project Plan & Timeline (Accelerated Blueprint)
 This schedule is optimized for an intensive implementation cycle, emphasizing building the MVP first and wrapping it with enterprise MLOps guardrails.
 
